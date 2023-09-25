@@ -1,0 +1,168 @@
+.testInfo {
+    display: flex;
+    flex-direction: column;
+    width: 36rem;
+    border: 1px solid lightgray;
+    padding: 1rem 4rem;
+    margin: 4rem 6rem;
+    font-family: sans-serif;
+}
+
+.testName {
+    font-size: 24px;
+    color: #2a2a2a;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.subInfo {
+    margin: 10px 0;
+    line-height: 22px;
+    font-size: 14px;
+    color: #404040;
+    font-weight: 500;
+}
+
+.otherInfo {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.testInfo .otherInfo button {
+    border: none;
+    padding: 10px;
+    background: #b79500;
+    margin: 32px;
+    cursor: pointer;
+    color: white;
+    cursor: pointer;
+}
+
+/* Practice test  */
+.practiceTest {
+    display: none;
+    margin: 4rem 6rem;
+}
+
+.anotherTestOpts {
+    display: flex;
+    flex-direction: column;
+    margin: 6rem;
+}
+
+.Practice_Opts,
+.Maths_Opts {
+    display: flex;
+}
+
+.anotherTestOpts .Practice_Opts button {
+    background: #01810d;
+    margin: 2px;
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    font-size: 16px;
+    width: 12rem;
+}
+
+.anotherTestOpts .Maths_Opts button {
+    background: #01810d;
+    margin: 2px;
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    font-size: 16px;
+    width: 12rem;
+}
+
+.anotherTestOpts h2 {
+    font-size: 24px;
+    font-family: sans-serif;
+    margin: 16px 0;
+    color: #424242;
+}
+
+.questionArea {
+    display: flex;
+    flex-direction: column;
+    width: 52rem;
+    position: relative;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    padding: 20px;
+    border: 1px solid lightgray;
+}
+
+.question strong {
+    font-size: 20px;
+    line-height: 24px;
+    color: #474735;
+
+}
+
+.opt {
+    margin: 16px 0;
+}
+
+.answer {
+    display: none;
+    align-items: center;
+    font-family: sans-serif;
+    background: #ffd26e;
+    padding: 8px 24px;
+    margin-top: 1rem;
+    height: 40px;
+}
+
+.nextQueBtn {
+    position: absolute;
+    right: 0%;
+    bottom: -16%;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background: #b79500;
+    cursor: pointer;
+}
+
+.progress {
+    font-family: sans-serif;
+    padding: 20px;
+    border: 1px solid #C5C5C5;
+    margin: 0 2rem;
+    width: 22rem;
+    height: 10rem;
+}
+
+.progress h2 {
+    font-size: 16px;
+}
+
+.checkAns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.checkAns>span {
+    width: 30px;
+    border: 1px solid gray;
+    display: flex;
+    height: 30px;
+    border-radius: 2px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}

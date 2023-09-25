@@ -4,21 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/testDetails.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/practiceTest.css">
     <title>test details</title>
 </head>
 
 <body>
     <header>
-        <img src="./images/logo.jpg" alt="logo" />
+        <img src="./images/logo.png" alt="logo" />
     </header>
     <div class="testInfo">
-        <select>
-            <option>TEST NAME 1</option>
-            <option>TEST NAME 2</option>
-            <option>TEST NAME 3</option>
-        </select>
-        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+        <span class="testName">Test 1 Practice Test</span>
+        <span class="subInfo">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
         <div class="otherInfo">
             <div style="display: flex; flex-direction: column; margin-right: 24px;">
                 <span style="font-size: 13px;">NO OF QUESTIONS</span>
@@ -28,9 +25,11 @@
                 <span style="font-size: 13px;">PASSING SCORE</span>
                 <strong style="margin: 8px 0;">70%</strong>
             </div>
-            <button><a href="https://sanketmhaiske.github.io/mcq-website/startTest.html"> START TEST</a></button>
+            <button onclick="startTest()"> START TEST</button>
         </div>
     </div>
+    <!-- Practice Test  -->
+    <div class="practiceTest"></div>
     <!-- Another tests  -->
     <div class="anotherTestOpts">
         <h2>PICK ANOTHER TESTS</h2>
@@ -44,6 +43,28 @@
             <button>MATHS TABLE</button>
         </div>
     </div>
+    <footer>
+        <div class="links">
+            <a>PRACTICE TEST</a>
+            <a>TAKE TEST FOR MATHS</a>
+        </div>
+        <div class="links">
+            <a>MATHS TABLES</a>
+            <a>FEEDBACK</a>
+        </div>
+        <div class="links">
+            <a>ABOUT US</a>
+            <a>PRIVACY & TERMS</a>
+        </div>
+        <div class="links">
+            <a>OTHER SERVICES</a>
+            <a>CONTACT DETAILS</a>
+        </div>
+        <span class="copyright">
+            © Copyright 2023 webedu.com
+        </span>
+    </footer>
+    <script src="./js/practiceTest.js"></script>
 </body>
 
 </html>
