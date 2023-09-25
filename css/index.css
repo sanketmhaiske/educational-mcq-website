@@ -132,7 +132,7 @@ header img {
     flex-direction: column;
     background: linear-gradient(332deg, #7F7FD5, #91EAE4);
     height: 8rem;
-    padding: 4rem;
+    padding: 4rem 8rem;
 }
 
 .section_1>span {
@@ -168,7 +168,7 @@ header img {
     justify-content: end;
     background: linear-gradient(20deg, #e9db97, #8fdfe2);
     height: 8rem;
-    padding: 4rem;
+    padding: 4rem 8rem;
 
 }
 
