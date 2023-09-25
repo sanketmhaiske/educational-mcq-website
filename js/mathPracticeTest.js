@@ -4,7 +4,14 @@ function startTest() {
     document.querySelector('.practiceTest').innerHTML = `
     <div class="questionArea">
         <div class="question">
-            <strong><span style='font-size: 24px;'>Q.</span> Ipsum is simply dummy text of the printing and typesetting industry.</strong>
+            <strong>
+               <span style='font-size: 24px;'>Q.</span> 
+               <div class='questionImg'>
+               </div>
+               <span style="margin-top: 16px;">
+                 Ipsum is simply dummy text of the printing and typesetting industry.
+               </span>
+            </strong>
             <form>
                 <div class="opt">
                     <input type="radio" id="opt1" name="opt" value="opt1" onclick="submitAns('opt1')"/>

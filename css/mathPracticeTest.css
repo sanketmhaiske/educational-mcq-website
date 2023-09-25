@@ -1,0 +1,9 @@
+.question strong{
+    display: flex;
+}
+.questionImg{
+    width: 16rem;
+    height: 14rem;
+    border: 1px solid lightgray;
+    margin: 0 10px;
+}

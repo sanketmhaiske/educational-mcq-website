@@ -1,0 +1,21 @@
+.Btns {
+    display: flex;
+    justify-content: center;
+    height: 8rem;
+    align-items: center;
+}
+.hero-btn{
+    background: #44aa21;
+}
+button {
+    display: flex;
+    margin: 8px;
+    padding: 12px 32px;
+    font-size: 24px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    bottom: 24%;
+    background: #236fff;
+    color: white;
+}

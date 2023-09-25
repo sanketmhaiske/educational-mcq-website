@@ -60,6 +60,7 @@ header img {
     opacity: 0;
     top: 70%;
     animation: testBox 0.8s ease-in-out forwards;
+    z-index: +2;
 }
 
 @keyframes testBox {
@@ -97,7 +98,6 @@ header img {
     height: max-content;
     padding: 32px;
     font-family: sans-serif;
-    z-index: +2;
 }
 
 .testBoxContent>h2 {
@@ -148,8 +148,10 @@ header img {
     font-size: 13px;
 }
 
-.section_1>button {
+.section_1>a {
     display: flex;
+    font-family: sans-serif;
+    text-decoration: none;
     width: fit-content;
     padding: 12px 24px;
     border: none;
