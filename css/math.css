@@ -3,10 +3,13 @@
     justify-content: center;
     height: 8rem;
     align-items: center;
+    position: relative;
 }
-.hero-btn{
+
+.hero-btn {
     background: #44aa21;
 }
+
 button {
     display: flex;
     margin: 8px;
@@ -18,4 +21,47 @@ button {
     bottom: 24%;
     background: #236fff;
     color: white;
+}
+
+.mathTableOpts {
+    display: none;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 22rem;
+    background: white;
+    border: 1px solid lightgray;
+    top: 70%;
+    z-index: +1;
+    margin-left: 14%;
+    padding: 10px;
+    font-family: sans-serif;
+    animation: testBox 0.8s ease-in-out forwards;
+}
+
+@keyframes testBox {
+    from {
+        top: 70%;
+        opacity: 0;
+    }
+
+    to {
+        top: 85%;
+        opacity: 1;
+    }
+}
+
+.mathTableOpts a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    background: #036179;
+    color: white;
+    padding: 10px 16px;
+    margin: 2px;
+    width: 5rem;
+    height: 16px;
+    justify-content: center;
+    font-size: 14px;
+    font-family: sans-serif;
+    cursor: pointer;
 }

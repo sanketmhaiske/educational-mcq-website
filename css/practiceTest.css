@@ -1,11 +1,12 @@
 .testInfo {
     display: flex;
     flex-direction: column;
-    width: 36rem;
-    border: 1px solid lightgray;
+    width: 50rem;
+    position: relative;
     padding: 1rem 4rem;
     margin: 4rem 6rem;
     font-family: sans-serif;
+    background: #aacdff;
 }
 
 .testName {
@@ -18,7 +19,7 @@
 .subInfo {
     margin: 10px 0;
     line-height: 22px;
-    font-size: 14px;
+    font-size: 16px;
     color: #404040;
     font-weight: 500;
 }
@@ -32,11 +33,14 @@
 .testInfo .otherInfo button {
     border: none;
     padding: 10px;
-    background: #b79500;
-    margin: 32px;
-    cursor: pointer;
+    background: #0f71ff;
+    font-size: 16px;
     color: white;
     cursor: pointer;
+    position: absolute;
+    right: 0px;
+    width: 10rem;
+    bottom: 0px;
 }
 
 /* Practice test  */
@@ -56,14 +60,37 @@
     display: flex;
 }
 
-.anotherTestOpts .Practice_Opts button {
-    background: #01810d;
-    margin: 2px;
-    border: none;
-    padding: 12px 24px;
+.anotherTestOpts .Practice_Opts .practiceTestBox {
+    display: flex;
+    flex-direction: column;
+    margin-right: 8px;
+    background: white;
+    border: 1px solid lightgray;
+    position: relative;
+    padding: 16px;
+    font-family: sans-serif;
+    width: 18rem;
+}
+
+.BtnSpan {
+    display: flex;
+    position: relative;
+    height: 3rem;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.BtnSpan>button {
+    position: absolute;
+    right: 0;
+    background: #0f71ff;
     color: white;
-    font-size: 16px;
-    width: 12rem;
+    border: none;
+    padding: 8px 16px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
 .anotherTestOpts .Maths_Opts button {
@@ -110,7 +137,23 @@ form {
 }
 
 .opt {
-    margin: 16px 0;
+    display: flex;
+    align-items: baseline;
+    margin: 20px 0;
+}
+
+.opt label {
+    display: flex;
+    margin: 0 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 2px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.opt label:hover {
+    background-color: rgb(237, 237, 237);
 }
 
 .answer {
@@ -132,11 +175,13 @@ form {
     font-weight: bold;
     color: white;
     cursor: pointer;
-    background: #b79500;
+    background: #0f71ff;
     cursor: pointer;
 }
 
 .progress {
+    position: absolute;
+    right: 0;
     font-family: sans-serif;
     padding: 20px;
     border: 1px solid #C5C5C5;
@@ -147,6 +192,14 @@ form {
 
 .progress h2 {
     font-size: 16px;
+    margin: 6px 0;
+}
+
+.progress>span{
+    font-size: 12px;
+    color: gray;
+    font-style: italic;
+    letter-spacing: 0.4px;
 }
 
 .checkAns {
@@ -161,8 +214,20 @@ form {
     display: flex;
     height: 30px;
     border-radius: 2px;
-    margin-right: 10px;
+    margin-right: 2px;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.section_1,
+.section_2 {
+    width: auto;
+    padding: 3rem 8rem;
 }

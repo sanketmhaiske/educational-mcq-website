@@ -19,6 +19,8 @@
             <img
                 src="https://images.unsplash.com/photo-1590019012497-b44f1aaa40d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fG1hdGhzfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" />
         </div>
+        <span class="heroSentence">Let early education be a sort of a musement; you will then be bette able to find out
+            the natural bent. </span>
         <button class="hero-btn" onclick="takeTestNow()">TAKE TEST NOW</button>
         <div class="availableTests">
             <div class="testBoxContent">
@@ -68,7 +70,22 @@
     </div>
     <div class="Btns">
         <button>MATH TEST</button>
-        <button>MATH TABLE</button>
+        <button onclick="mathTable()">MATH TABLE</button>
+        <div class="mathTableOpts">
+            <span class="closeTestBox" onclick="closeMathTestBox()">&#x2715;</span>
+            <h3>CHOOSE TABLE</h3>
+            <div style="display: flex;flex-wrap: wrap;">
+                <a href="/mathTable.html">Table 1</a>
+                <a>Table 2</a>
+                <a>Table 3</a>
+                <a>Table 4</a>
+                <a>Table 5</a>
+                <a>Table 6</a>
+                <a>Table 7</a>
+                <a>Table 8</a>
+                <a>Table 9</a>
+            </div>
+        </div>
     </div>
     <br><br>
     <br><br>
@@ -96,8 +113,9 @@
             © Copyright 2023 webedu.com
         </span>
     </footer>
-     <!-- script  -->
-     <script src="./js/index.js"></script>
+    <!-- script  -->
+    <!-- <script src="./js/index.js"></script> -->
+    <script src="./js/math.js"></script>
 </body>
 
 </html>

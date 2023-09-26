@@ -14,6 +14,30 @@ html {
     height: 480px;
 }
 
+@media screen and (max-width: 1000px) {
+    .banner {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .banner {
+        height: 356px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .banner {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .banner {
+        height: 200px;
+    }
+}
+
 .banner>.imgContainer>img {
     opacity: 0.8;
     width: 100%;
@@ -40,6 +64,22 @@ header img {
     height: 3rem;
 }
 
+.heroSentence {
+    color: white;
+    position: absolute;
+    font-family: sans-serif;
+    margin-top: 3rem;
+    text-align: center;
+    margin: 16px;
+    line-height: 18px;
+}
+
+@media screen and (max-width: 1000px) {
+    .heroSentence {
+        font-size: 13px;
+    }
+}
+
 .hero-btn {
     display: flex;
     position: absolute;
@@ -54,6 +94,20 @@ header img {
     color: white;
 }
 
+@media screen and (max-width: 1000px) {
+    .hero-btn {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero-btn {
+        bottom: 10%;
+        padding: 8px 24px;
+        font-size: 14px;
+    }
+}
+
 .availableTests {
     display: none;
     position: absolute;
@@ -64,17 +118,37 @@ header img {
 }
 
 @keyframes testBox {
-    from{
+    from {
         top: 70%;
         opacity: 0;
     }
-    to{
+
+    to {
         top: 80%;
         opacity: 1;
     }
 }
 
-.closeTestBox{
+@media screen and (max-width: 500px) {
+    .availableTests {
+        top: 80%;
+        animation: testBox 0.8s ease-in-out forwards;
+    }
+
+    @keyframes testBox {
+        from {
+            top: 80%;
+            opacity: 0;
+        }
+
+        to {
+            top: 100%;
+            opacity: 1;
+        }
+    }
+}
+
+.closeTestBox {
     position: absolute;
     right: 2%;
     top: 2%;
@@ -82,7 +156,7 @@ header img {
     cursor: pointer;
 }
 
-.triangle{
+.triangle {
     position: absolute;
     top: -12px;
     color: white;
@@ -94,10 +168,20 @@ header img {
     align-items: center;
     justify-content: center;
     background: white;
-    width: 532px;
+    width: 500px;
     height: max-content;
     padding: 32px;
     font-family: sans-serif;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 500px) {
+    .testBoxContent {
+        width: 90%;
+        padding: 10px;
+        margin: 0 auto;
+        position: relative;
+    }
 }
 
 .testBoxContent>h2 {
@@ -110,14 +194,20 @@ header img {
     display: flex;
     text-decoration: none;
     align-items: center;
-    background: gray;
+    background: #036179;
     color: white;
-    padding: 10px 16px;
-    margin: 8px;
+    padding: 9px 16px;
+    margin: 2px;
     width: 5rem;
     height: 16px;
     justify-content: center;
     font-size: 12px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.testBoxContent .testTypes a:hover {
+    background: #00718e;
 }
 
 .testTypes {
@@ -126,13 +216,50 @@ header img {
     justify-content: center;
 }
 
+.sections {
+    display: flex;
+    height: 28rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .sections {
+        height: 22rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .sections {
+        height: 28rem;
+        flex-direction: column;
+    }
+}
+
 .section_1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
     background: linear-gradient(332deg, #7F7FD5, #91EAE4);
-    height: 8rem;
-    padding: 4rem 8rem;
+    width: 50%;
+    padding: 8rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .section_1 {
+        padding: 4rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .section_1 {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .section_1 {
+        width: auto;
+        height: 50%;
+    }
 }
 
 .section_1>span {
@@ -140,15 +267,21 @@ header img {
     font-size: 32px;
     font-weight: 600;
     color: #2e392a;
-    line-height: 24px;
+    line-height: 36px;
 }
 
-.section_1 p{
+@media screen and (max-width: 1000px) {
+    .section_1>span {
+        font-size: 26px;
+    }
+}
+
+.section_1 p {
     font-family: sans-serif;
     font-size: 13px;
 }
 
-.section_1>a {
+.section_1 a {
     display: flex;
     font-family: sans-serif;
     text-decoration: none;
@@ -158,36 +291,68 @@ header img {
     background: #005ba3;
     color: white;
     border-radius: 2px;
-    margin-top: 24px;
+    margin-top: 4px;
     font-weight: 500;
     font-size: 18px;
     cursor: pointer;
 }
 
+@media screen and (max-width: 1000px) {
+    .section_1 a {
+        font-size: 14px;
+    }
+}
+
 .section_2 {
     display: flex;
-    align-items: center;
-    justify-content: end;
+    justify-content: center;
+    flex-direction: column;
     background: linear-gradient(20deg, #e9db97, #8fdfe2);
-    height: 8rem;
-    padding: 4rem 8rem;
+    width: 50%;
+    padding: 8rem;
 
 }
 
-.section_2>div>span {
+@media screen and (max-width: 1200px) {
+    .section_2 {
+        padding: 4rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .section_2 {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .section_2 {
+        width: auto;
+        height: 50%;
+    }
+}
+
+
+.section_2 span {
     font-family: sans-serif;
     font-size: 32px;
     font-weight: 600;
     color: #2e392a;
-    line-height: 24px;
+    line-height: 36px;
 }
 
-.section_2 p{
+@media screen and (max-width: 1000px) {
+    .section_2>span {
+        font-size: 26px;
+    }
+}
+
+.section_2 p {
     font-family: sans-serif;
     font-size: 13px;
 }
 
-.section_2>div>button {
+.section_2 button {
     display: flex;
     width: fit-content;
     padding: 12px 24px;
@@ -195,10 +360,16 @@ header img {
     background: #015647;
     color: white;
     border-radius: 2px;
-    margin-top: 24px;
+    margin-top: 4px;
     font-weight: 500;
     font-size: 18px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .section_2 button {
+        font-size: 14px;
+    }
 }
 
 footer {
@@ -206,10 +377,22 @@ footer {
     position: relative;
     flex-wrap: wrap;
     background: #000000;
-    height: 12rem;
+    height: auto;
     padding: 32px;
     color: white;
     justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+    footer {
+        justify-content: left;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    footer {
+        flex-direction: column;
+    }
 }
 
 .links {
@@ -219,13 +402,19 @@ footer {
     font-family: sans-serif;
 }
 
+@media screen and (max-width: 650px) {
+    .links {
+        padding: 12px;
+    }
+}
+
 .links>a {
     margin: 10px 0;
     font-size: 12px;
     cursor: pointer;
 }
 
-.copyright{
+.copyright {
     font-size: 12px;
     font-family: sans-serif;
     position: absolute;
@@ -234,4 +423,13 @@ footer {
     justify-content: center;
     align-items: center;
     width: -webkit-fill-available;
+}
+
+@media screen and (max-width: 650px) {
+    .copyright {
+        position: relative;
+        margin: 2rem 12px;
+        width: auto;
+        justify-content: left;
+    }
 }

@@ -1,0 +1,39 @@
+.tableArea {
+    margin: 6rem;
+}
+
+.tableName {
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #3b3b3b;
+}
+
+.pdfReader {
+    display: flex;
+    border: 1px solid lightgray;
+    width: 40rem;
+    height: 40rem;
+    margin: 32px 0;
+}
+
+.Btns {
+    display: flex;
+    margin: 4rem 6rem;
+}
+
+.Btns button {
+    display: flex;
+    font-family: sans-serif;
+    text-decoration: none;
+    width: fit-content;
+    padding: 12px 24px;
+    border: none;
+    background: #005ba3;
+    color: white;
+    margin-top: 4px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 8px;
+}

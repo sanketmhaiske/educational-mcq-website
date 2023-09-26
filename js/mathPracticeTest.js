@@ -1,3 +1,9 @@
+// Practice test name 
+const MathsTestNo = sessionStorage.getItem('MathsTestNo')
+document.querySelector('.testName').innerHTML = `
+  Maths Test ${MathsTestNo}
+`
+
 function startTest() {
     document.querySelector('.testInfo').style.display = 'none';
     document.querySelector('.practiceTest').style.display = 'flex';
@@ -75,3 +81,24 @@ function submitAns(opt) {
         </span>
    `
 }
+
+const Practice_Opts = document.querySelector('.Practice_Opts');
+str = '';
+for (let i = 1; i <= 3; i++) {
+    str += `
+    <div class="practiceTestBox">
+        <h3>Maths Test ${parseInt(MathsTestNo) + i}</h3>
+        <span>Lorem Ipsum is simply dummy text</span>
+        <span class="BtnSpan">
+            <button>START</button>
+        </span>
+        <div style="display: flex; flex-direction: column;">
+            <strong>${20 + (i*5)}</strong>
+            <span style="font-size: 14px;
+            margin: 10px 0;
+            color: #454545;">QUESTIONS</span>
+        </div>
+    </div>
+    `
+}
+Practice_Opts.innerHTML = str;
