@@ -1,9 +1,34 @@
 .question strong{
     display: flex;
+    width: 100%;
 }
+
+@media screen and (max-width: 700px) {
+    .question strong{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .questionImg{
     width: 16rem;
     height: 14rem;
     border: 1px solid lightgray;
     margin: 0 10px;
+}
+
+.questionText{
+    margin-top: 5px;
+    width: 50%;
+    font-size: 16px
+}
+
+@media screen and (max-width: 700px) {
+    .questionText{
+        margin: 10px;
+        width: auto;
+    }
+    .progress{
+        margin-top: 10rem;
+    }
 }

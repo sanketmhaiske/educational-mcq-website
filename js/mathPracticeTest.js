@@ -14,31 +14,28 @@ function startTest() {
                <span style='font-size: 24px;'>Q.</span> 
                <div class='questionImg'>
                </div>
-               <span style="margin-top: 16px;">
-                 Ipsum is simply dummy text of the printing and typesetting industry.
+               <span class='questionText'>
+                    There is a circular path around a sports field. Priya takes 18 minutes to drive one round of the field. Harish takes 12 minutes. Suppose they both start at the same point and at the same time and go in the same direction. After how many minutes will they meet ?
                </span>
             </strong>
             <form>
                 <div class="opt">
                     <input type="radio" id="opt1" name="opt" value="opt1" onclick="submitAns('opt1')"/>
-                    <label for="opt1" class='opt1'>Option 1</label>
+                    <label for="opt1" class='opt1'>36 minutes</label>
                 </div>
                 <div class="opt">
                     <input type="radio" id="opt2" name="opt" value="opt2" onclick="submitAns('opt2')"/>
-                    <label for="opt2" class='opt2'>Option 2</label>
+                    <label for="opt2" class='opt2'>18 minutes</label>
                 </div>
                 <div class="opt">
                     <input type="radio" id="opt3" name="opt" value="opt3" onclick="submitAns('opt3')"/>
-                    <label for="opt3" class='opt3'>Option 3</label>
+                    <label for="opt3" class='opt3'>6 minutes</label>
                 </div>
                 <div class="opt">
                     <input type="radio" id="opt4" name="opt" value="opt4" onclick="submitAns('opt4')"/>
-                    <label for="opt4" class='opt4'>Option 4</label>
+                    <label for="opt4" class='opt4'>They will not meet</label>
                 </div>
             </form>
-        </div>
-        <div class="answer">
-           
         </div>
         <button class="nextQueBtn">NEXT QUESTION</button>
     </div>
@@ -68,18 +65,12 @@ function startTest() {
 
 function submitAns(opt) {
     if (opt == 'opt1') {
-        document.querySelector(`.${opt}`).style.color = 'green';
+        document.querySelector(`.${opt}`).style.color = 'white';
+        document.querySelector(`.${opt}`).style.background = 'green';
     } else {
-        document.querySelector(`.${opt}`).style.color = 'red';
+        document.querySelector(`.${opt}`).style.color = 'white';
+        document.querySelector(`.${opt}`).style.background = '#ff6e00';
     }
-
-    const ans = document.querySelector('.answer');
-    ans.style.display = 'flex';
-    ans.innerHTML = `
-        <span>
-            CORRECT ANSWER : Option 1
-        </span>
-   `
 }
 
 const Practice_Opts = document.querySelector('.Practice_Opts');
