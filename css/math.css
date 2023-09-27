@@ -23,6 +23,14 @@ button {
     color: white;
 }
 
+@media screen and (max-width: 650px) {
+    button{
+        font-size: 18px;
+        padding: 8px 24px;
+        margin: 4px;
+    }
+}
+
 .mathTableOpts {
     display: none;
     flex-wrap: wrap;
@@ -36,6 +44,13 @@ button {
     padding: 10px;
     font-family: sans-serif;
     animation: testBox 0.8s ease-in-out forwards;
+}
+
+@media screen and (max-width: 600px) {
+    .mathTableOpts {
+        width: 80%;
+        margin-left: auto;
+    }
 }
 
 @keyframes testBox {

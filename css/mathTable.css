@@ -2,7 +2,19 @@
     margin: 6rem;
 }
 
-.tableName {
+@media screen and (max-width: 800px) {
+    .tableArea {
+        margin: 2rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .tableArea {
+        margin: 1rem;
+        margin-top: 3rem;
+    }
+}
+
+.mathTableName{
     font-size: 24px;
     font-family: sans-serif;
     font-weight: bold;
@@ -15,6 +27,12 @@
     width: 40rem;
     height: 40rem;
     margin: 32px 0;
+}
+
+@media screen and (max-width: 800px) {
+    .pdfReader{
+        width: -webkit-fill-available;
+    }
 }
 
 .Btns {
@@ -36,4 +54,21 @@
     font-size: 18px;
     cursor: pointer;
     margin-right: 8px;
+}
+
+@media screen and (max-width: 800px) {
+    .Btns {
+        margin: 4rem 2rem;
+    }
+    .Btns button {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .Btns {
+        margin: 3rem 1rem;
+    }
+    .Btns button {
+        font-size: 14px;
+    }
 }
