@@ -9,6 +9,39 @@
     background: #aacdff;
 }
 
+@media screen and (max-width: 1200px) {
+    .testInfo {
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .testInfo {
+        width: 32rem;
+        margin: 2rem;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .testInfo {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .testInfo {
+        height: 18rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .testInfo {
+        margin: 0px;
+        height: 20rem;
+        padding: 1rem 2rem;
+    }
+}
+
 .testName {
     font-size: 24px;
     color: #2a2a2a;
@@ -30,6 +63,13 @@
     margin-top: 2rem;
 }
 
+@media screen and (max-width: 450px) {
+    .otherInfo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 .testInfo .otherInfo button {
     border: none;
     padding: 10px;
@@ -43,10 +83,34 @@
     bottom: 0px;
 }
 
+@media screen and (max-width: 650px) {
+    .testInfo .otherInfo button {
+        right: auto;
+        bottom: 2%;
+    }
+}
+
 /* Practice test  */
 .practiceTest {
     display: none;
     margin: 4rem 6rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .practiceTest {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 900px) {
+    .practiceTest {
+        margin: 2rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .practiceTest {
+        margin: 1rem;
+    }
 }
 
 .anotherTestOpts {
@@ -55,15 +119,31 @@
     margin: 6rem;
 }
 
+@media screen and (max-width: 900px) {
+    .anotherTestOpts {
+        margin: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .anotherTestOpts {
+        margin: 1rem;
+        margin-top: 2rem;
+    }
+}
+
 .Practice_Opts,
 .Maths_Opts {
     display: flex;
+    flex-wrap: wrap;
 }
+
 
 .anotherTestOpts .Practice_Opts .practiceTestBox {
     display: flex;
     flex-direction: column;
     margin-right: 8px;
+    margin-bottom: 8px;
     background: white;
     border: 1px solid lightgray;
     position: relative;
@@ -110,11 +190,28 @@
     color: #424242;
 }
 
+@media screen and (max-width: 500px) {
+    .anotherTestOpts h2 {
+        font-size: 18px;
+    }
+}
+
 .questionArea {
     display: flex;
     flex-direction: column;
     width: 52rem;
     position: relative;
+}
+
+@media screen and (max-width: 1400px) {
+    .questionArea {
+        width: 42rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    .questionArea {
+        width: fit-content;
+    }
 }
 
 form {
@@ -131,7 +228,7 @@ form {
 
 .question strong {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 30px;
     color: #474735;
 
 }
@@ -190,12 +287,25 @@ form {
     height: 10rem;
 }
 
+@media screen and (max-width: 1200px) {
+    .progress {
+        position: relative;
+        margin: 0;
+        margin-top: 5rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .progress {
+        width: fit-content;
+    }
+}
+
 .progress h2 {
     font-size: 16px;
     margin: 6px 0;
 }
 
-.progress>span{
+.progress>span {
     font-size: 12px;
     color: gray;
     font-style: italic;
@@ -230,4 +340,37 @@ form {
 .section_2 {
     width: auto;
     padding: 3rem 8rem;
+}
+
+@media screen and (max-width: 800px) {
+
+    .section_1,
+    .section_2 {
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .section_1,
+    .section_2 {
+        padding: 2rem;
+    }
+
+    .section_1>span,
+    .section_2>div>span {
+        font-size: 24px;
+    }
+
+    .section_1>p,
+    .section_2>div>p {
+        margin-top: 0px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .section_2>div {
+        align-items: flex-start !important;
+    }
 }

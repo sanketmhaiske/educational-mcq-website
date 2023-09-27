@@ -4,7 +4,6 @@ document.querySelector('.testName').innerHTML = `
   Practice Test ${practiceTestNo}
 `
 
-
 function startTest() {
     document.querySelector('.testInfo').style.display = 'none';
     document.querySelector('.practiceTest').style.display = 'flex';
@@ -67,7 +66,6 @@ function submitAns(opt) {
         document.querySelector(`.${opt}`).style.background = '#ff6e00';
     }
 }
-
 
 const Practice_Opts = document.querySelector('.Practice_Opts');
 str = '';
