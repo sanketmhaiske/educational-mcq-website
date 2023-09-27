@@ -77,14 +77,17 @@ const QArray = [
 const correctAns = [];
 const wrongAns = [];
 
+
 function startTest(Q_no = 0) {
     var Ques_no = Q_no;
     const Data = QArray[Ques_no]
 
     question_numbers = ''
+
     for (key in QArray) {
-        question_numbers += `<span style='${correctAns.includes(QArray[key].Qno) ? "color: red;" : ''}'>${QArray[key].Qno}</span>`
+        question_numbers += `<span id='progressQ${QArray[key].Qno}'>${QArray[key].Qno}</span>`
     }
+
 
     document.querySelector('.testInfo').style.display = 'none';
     document.querySelector('.practiceTest').style.display = 'flex';
@@ -130,19 +133,24 @@ function startTest(Q_no = 0) {
 
 
 
-
-
-
 function nextQue(Ques_no) {
     startTest(Ques_no + 1)
+    let Cans = JSON.stringify(correctAns);
+    let Cobj = JSON.parse(Cans)
+    for (key in Cobj) {
+        document.querySelector(`#progressQ${Cobj[key]}`).style.background = 'green';
+        document.querySelector(`#progressQ${Cobj[key]}`).style.color = 'white';
+    }
+    let Wans = JSON.stringify(wrongAns);
+    let Wobj = JSON.parse(Wans)
+    for (key in Wobj) {
+        document.querySelector(`#progressQ${Wobj[key]}`).style.background = 'red';
+        document.querySelector(`#progressQ${Wobj[key]}`).style.color = 'white';
+    }
 }
 
 
-
 function submitAns(opt, cOpt, Qno) {
-
-    console.log('correct', correctAns)
-    console.log('wrong', wrongAns)
 
     if (opt == cOpt) {
         document.querySelector(`.opt${opt}`).style.color = 'white';
@@ -164,6 +172,7 @@ function submitAns(opt, cOpt, Qno) {
         document.querySelector(`.opt${opt}`).style.color = 'white';
         document.querySelector(`.opt${opt}`).style.background = '#ff6e00';
     }
+
 }
 
 const Practice_Opts = document.querySelector('.Practice_Opts');
