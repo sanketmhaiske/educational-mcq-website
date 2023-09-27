@@ -47,16 +47,16 @@ const QArray = [
     },
     {
         Qno: 4,
-        Question: 'In the context of digital computer, which of the following pairs of digits is referred to as binary code ?',
+        Question: 'Which of the following devices is NOT used to enter data into a computer ?',
         Options: [
             {
-                opt_no_1: '3 and 4 ',
-                opt_no_2: '0 and 1 ',
-                opt_no_3: '2 and 3 ',
-                opt_no_4: '1 and 2 ',
+                opt_no_1: 'Mouse',
+                opt_no_2: 'Keyboard',
+                opt_no_3: 'Scanner',
+                opt_no_4: 'Monitor',
             }
         ],
-        correctOpt: 2
+        correctOpt: 4
     },
     {
         Qno: 5,
