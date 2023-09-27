@@ -70,6 +70,71 @@ const QArray = [
             }
         ],
         correctOpt: 2
+    },
+    {
+        Qno: 6,
+        Question: 'Which unit of the computer is considered as the brain of the computer ?',
+        Options: [
+            {
+                opt_no_1: 'Memory unit',
+                opt_no_2: 'Input unit ',
+                opt_no_3: 'CPU',
+                opt_no_4: 'Output unit ',
+            }
+        ],
+        correctOpt: 3
+    },
+    {
+        Qno: 7,
+        Question: 'What is the full form of PROM ?',
+        Options: [
+            {
+                opt_no_1: 'Program read-only memory',
+                opt_no_2: 'Primary read-only memory',
+                opt_no_3: 'Programmable read-only memory',
+                opt_no_4: 'Program read-output memory',
+            }
+        ],
+        correctOpt: 3
+    },
+    {
+        Qno: 8,
+        Question: 'In the context of digital computer, which of the following pairs of digits is referred to as binary code ?',
+        Options: [
+            {
+                opt_no_1: '3 and 4 ',
+                opt_no_2: '0 and 1 ',
+                opt_no_3: '2 and 3 ',
+                opt_no_4: '1 and 2 ',
+            }
+        ],
+        correctOpt: 2
+    },
+    {
+        Qno: 9,
+        Question: 'In the context of digital computer, which of the following pairs of digits is referred to as binary code ?',
+        Options: [
+            {
+                opt_no_1: '3 and 4 ',
+                opt_no_2: '0 and 1 ',
+                opt_no_3: '2 and 3 ',
+                opt_no_4: '1 and 2 ',
+            }
+        ],
+        correctOpt: 2
+    },
+    {
+        Qno: 10,
+        Question: 'In the context of digital computer, which of the following pairs of digits is referred to as binary code ?',
+        Options: [
+            {
+                opt_no_1: '3 and 4 ',
+                opt_no_2: '0 and 1 ',
+                opt_no_3: '2 and 3 ',
+                opt_no_4: '1 and 2 ',
+            }
+        ],
+        correctOpt: 2
     }
 
 ]
@@ -130,7 +195,6 @@ function startTest(Q_no = 0) {
     </div>
 `
 }
-
 
 
 function nextQue(Ques_no) {
