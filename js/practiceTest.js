@@ -143,6 +143,7 @@ const correctAns = [];
 const wrongAns = [];
 
 
+
 function startTest(Q_no = 0) {
     var Ques_no = Q_no;
     const Data = QArray[Ques_no]
@@ -153,40 +154,34 @@ function startTest(Q_no = 0) {
         question_numbers += `<span id='progressQ${QArray[key].Qno}'>${QArray[key].Qno}</span>`
     }
 
-
     document.querySelector('.testInfo').style.display = 'none';
     document.querySelector('.practiceTest').style.display = 'flex';
     document.querySelector('.practiceTest').innerHTML = `
     <div class="questionArea">
         <div class="question">
             <strong><span style='font-size: 24px;'>Q ${Data.Qno}.</span> ${Data.Question}</strong>
-            <form>
-            ${Data.Options.map(val => (
-        `
-                    <div class="opt">
-                        <input type="radio" id="opt1" name="opt" value="opt1" onclick="submitAns('1' ,'${Data.correctOpt}', '${Data.Qno}')"/>
-                        <label for="opt1" class='opt1'>${val.opt_no_1}</label>
-                    </div>
-                    <div class="opt">
-                        <input type="radio" id="opt2" name="opt" value="opt2" onclick="submitAns('2' , '${Data.correctOpt}', '${Data.Qno}')"/>
-                        <label for="opt2" class='opt2'>${val.opt_no_2}</label>
-                    </div>
-                    <div class="opt">
-                        <input type="radio" id="opt3" name="opt" value="opt3" onclick="submitAns('3','${Data.correctOpt}', '${Data.Qno}')"/>
-                        <label for="opt3" class='opt3'>${val.opt_no_3}</label>
-                    </div>
-                    <div class="opt">
-                        <input type="radio" id="opt4" name="opt" value="opt4" onclick="submitAns('4','${Data.correctOpt}', '${Data.Qno}')"/>
-                        <label for="opt4" class='opt4'>${val.opt_no_4}</label>
-                    </div>
-                `
-    ))}
+            <br>
+            <form id="submit">
+                <div class='opt'>
+                   <input type="radio" id="opt1" name="opt" onchange="submitAns('1' ,'${Data.correctOpt}', '${Data.Qno}')"/ >
+                    <label for="opt1" class='opt1'>${Data.Options[0].opt_no_1}</label>
+                </div>
+                <div class='opt'>
+                    <input type="radio" id="opt2" name="opt" onchange="submitAns('2' , '${Data.correctOpt}', '${Data.Qno}')    "/>
+                    <label for="opt2" class='opt2'>${Data.Options[0].opt_no_2}</label>
+                </div>
+                <div class='opt'>
+                    <input type="radio" id="opt3" name="opt"  onchange="submitAns('3','${Data.correctOpt}', '${Data.Qno}')"/    >
+                   <label for="opt3" class='opt3'>${Data.Options[0].opt_no_3}</label>
+                </div>
+                <div class='opt'>
+                    <input type="radio" id="opt4" name="opt" onchange="submitAns('4','${Data.correctOpt}', '${Data.Qno}')" /    >
+                    <label for="opt4" class='opt4'>${Data.Options[0].opt_no_4}</label>
+                </div>
+                ${Ques_no + 1 == QArray[QArray.length - 1].Qno ? '' : `<button class="nextQueBtn" type="submit">NEXT QUESTION</button>`}
             </form>
+               <button id="submitTestBtn" onclick="submitTest()">SUBMIT TEST</button>
         </div>
-        ${Ques_no + 1 == QArray[QArray.length - 1].Qno ?
-            `<button class="nextQueBtn" onclick='submitTest()'>SUBMIT TEST</button>` :
-            `<button class="nextQueBtn" onclick='nextQue(${Ques_no})'>NEXT QUESTION</button>`
-        }
     </div>
 
     <div class="progress">
@@ -197,25 +192,42 @@ function startTest(Q_no = 0) {
         </div>
     </div>
 `
-}
-
-
-function nextQue(Ques_no) {
-    startTest(Ques_no + 1)
-    let Cans = JSON.stringify(correctAns);
-    let Cobj = JSON.parse(Cans)
-    for (key in Cobj) {
-        document.querySelector(`#progressQ${Cobj[key]}`).style.background = 'green';
-        document.querySelector(`#progressQ${Cobj[key]}`).style.color = 'white';
+    if (Ques_no + 1 == QArray[QArray.length - 1].Qno) {
+        document.querySelector('#submitTestBtn').style.display = 'flex';
+        document.querySelector('.nextQueBtn').style.display = 'none';
     }
-    let Wans = JSON.stringify(wrongAns);
-    let Wobj = JSON.parse(Wans)
-    for (key in Wobj) {
-        document.querySelector(`#progressQ${Wobj[key]}`).style.background = 'red';
-        document.querySelector(`#progressQ${Wobj[key]}`).style.color = 'white';
+    if (Ques_no + 1 != QArray[QArray.length - 1].Qno) {
+        document.querySelector('.nextQueBtn').style.display = 'flex';
+        document.querySelector('#submitTestBtn').style.display = 'none';
     }
-}
 
+
+
+    // Next Question Btn 
+    document.querySelector('#submit').addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (!e.target.opt.value) {
+            alert('Please select any option')
+        } else {
+
+            startTest(Ques_no + 1)
+            let Cans = JSON.stringify(correctAns);
+            let Cobj = JSON.parse(Cans)
+            for (key in Cobj) {
+                document.querySelector(`#progressQ${Cobj[key]}`).style.background = 'green';
+                document.querySelector(`#progressQ${Cobj[key]}`).style.color = 'white';
+            }
+            let Wans = JSON.stringify(wrongAns);
+            let Wobj = JSON.parse(Wans)
+            for (key in Wobj) {
+                document.querySelector(`#progressQ${Wobj[key]}`).style.background = '#ff6e00';
+                document.querySelector(`#progressQ${Wobj[key]}`).style.color = 'white';
+            }
+        }
+
+    })
+}
 
 function submitAns(opt, cOpt, Qno) {
     if (opt == cOpt) {
@@ -233,6 +245,11 @@ function submitAns(opt, cOpt, Qno) {
             }
         }
 
+        for (let i = 1; i <= 4; i++) {
+            if (opt != 'opt' + i) {
+                document.querySelector('#opt' + i).disabled = true;
+            }
+        }
     }
     if (opt != cOpt) {
         if (!wrongAns.includes(Qno)) {
@@ -246,8 +263,16 @@ function submitAns(opt, cOpt, Qno) {
         }
         document.querySelector(`.opt${opt}`).style.color = 'white';
         document.querySelector(`.opt${opt}`).style.background = '#ff6e00';
-    }
 
+        document.querySelector(`.opt${cOpt}`).style.color = 'white';
+        document.querySelector(`.opt${cOpt}`).style.background = 'green';
+
+        for (let i = 1; i <= 4; i++) {
+            if (opt != 'opt' + i) {
+                document.querySelector('#opt' + i).disabled = true;
+            }
+        }
+    }
 }
 
 const Practice_Opts = document.querySelector('.Practice_Opts');
@@ -271,12 +296,14 @@ for (let i = 1; i <= 3; i++) {
 }
 Practice_Opts.innerHTML = str;
 
+// Submit Test 
 function submitTest() {
     document.querySelector('.practiceTest').style.display = 'none';
+    document.querySelector('.testScore').style.display = 'flex';
     document.querySelector('.testScore').innerHTML = `
-        <div>
-           <h3>Nice ! Your scored : ${correctAns.length} </h3>
-           <span> Question Answer correctly : ${correctAns.length}/${QArray.length}</span>
-        </div>
-    `
+            <div>
+               <h3>Nice ! Your scored : ${correctAns.length} </h3>
+               <span> Question Answer correctly : ${correctAns.length}/${QArray.length}</span>
+            </div>
+        `
 }

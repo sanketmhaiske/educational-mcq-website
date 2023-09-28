@@ -266,7 +266,8 @@ form {
     height: 40px;
 }
 
-.nextQueBtn {
+.nextQueBtn,
+#submitTestBtn {
     position: absolute;
     right: 0%;
     bottom: -16%;
@@ -411,11 +412,13 @@ form {
     .testScore {
         padding: 1rem;
     }
+
     .testScore>div>h3 {
         font-size: 24px;
     }
+
     .testScore>div {
         padding: 30px;
     }
-    
+
 }
