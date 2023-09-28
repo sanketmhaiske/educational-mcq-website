@@ -183,12 +183,15 @@ function startTest(Q_no = 0) {
     ))}
             </form>
         </div>
-        <button class="nextQueBtn" onclick='nextQue(${Ques_no})'>NEXT QUESTION</button>
+        ${Ques_no + 1 == QArray[QArray.length - 1].Qno ?
+            `<button class="nextQueBtn" onclick='submitTest()'>SUBMIT TEST</button>` :
+            `<button class="nextQueBtn" onclick='nextQue(${Ques_no})'>NEXT QUESTION</button>`
+        }
     </div>
 
     <div class="progress">
         <h2>YOUR PROGRESS</h2>
-        <span>Answer 12 questions correctly.</span>
+        <span>Answer ${correctAns.length} questions correctly.</span>
         <div class="checkAns">
           ${question_numbers}
         </div>
@@ -215,23 +218,31 @@ function nextQue(Ques_no) {
 
 
 function submitAns(opt, cOpt, Qno) {
-
     if (opt == cOpt) {
         document.querySelector(`.opt${opt}`).style.color = 'white';
         document.querySelector(`.opt${opt}`).style.background = 'green';
 
-        if (wrongAns.includes(Qno)) {
-            return wrongAns.filter(item => item !== Qno)
-        }
         if (!correctAns.includes(Qno)) {
             correctAns.push(Qno)
         }
-    } else {
-        if (correctAns.includes(Qno)) {
-            return correctAns.filter(item => item !== Qno)
+
+        if (wrongAns.includes(Qno)) {
+            let index = wrongAns.indexOf(Qno);
+            if (index > -1) {
+                wrongAns.splice(index, 1);
+            }
         }
+
+    }
+    if (opt != cOpt) {
         if (!wrongAns.includes(Qno)) {
             wrongAns.push(Qno)
+        }
+        if (correctAns.includes(Qno)) {
+            let index = correctAns.indexOf(Qno);
+            if (index > -1) {
+                correctAns.splice(index, 1);
+            }
         }
         document.querySelector(`.opt${opt}`).style.color = 'white';
         document.querySelector(`.opt${opt}`).style.background = '#ff6e00';
@@ -259,3 +270,13 @@ for (let i = 1; i <= 3; i++) {
     `
 }
 Practice_Opts.innerHTML = str;
+
+function submitTest() {
+    document.querySelector('.practiceTest').style.display = 'none';
+    document.querySelector('.testScore').innerHTML = `
+        <div>
+           <h3>Nice ! Your scored : ${correctAns.length} </h3>
+           <span> Question Answer correctly : ${correctAns.length}/${QArray.length}</span>
+        </div>
+    `
+}

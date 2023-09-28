@@ -1,12 +1,19 @@
-.question strong{
+.question .mathQue{
     display: flex;
     width: 100%;
 }
 
+.Qtext{
+    width: 19rem;
+}
+
 @media screen and (max-width: 700px) {
-    .question strong{
+    .question .mathQue{
         display: flex;
         flex-direction: column;
+    }
+    .question strong{
+        margin: 10px;
     }
 }
 
@@ -31,4 +38,47 @@
     .progress{
         margin-top: 10rem;
     }
+}
+
+
+
+/* Test Scrore  */
+.testScore {
+    display: none;
+    padding: 4rem 6rem;
+    font-family: sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+    .testScore {
+        padding: 2rem;
+    }
+}
+
+.testScore>div {
+    background: lightgreen;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #373737;
+    width: -webkit-fill-available;
+}
+
+.testScore>div>h3 {
+    font-size: 32px;
+    margin: 16px 0;
+}
+
+@media screen and (max-width: 650px) {
+    .testScore {
+        padding: 1rem;
+    }
+    .testScore>div>h3 {
+        font-size: 24px;
+    }
+    .testScore>div {
+        padding: 30px;
+    }
+    
 }
