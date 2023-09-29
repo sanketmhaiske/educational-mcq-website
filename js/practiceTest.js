@@ -283,7 +283,7 @@ for (let i = 1; i <= 3; i++) {
         <h3>Practice Test ${parseInt(practiceTestNo) + i}</h3>
         <span>Lorem Ipsum is simply dummy text</span>
         <span class="BtnSpan">
-            <button>START</button>
+            <button><a style="color:white;" href="practiceTest.html" onclick="practiceTest(${parseInt(practiceTestNo) + i})">START</a></button>
         </span>
         <div style="display: flex; flex-direction: column;">
             <strong>${20 + (i * 5)}</strong>
@@ -295,6 +295,11 @@ for (let i = 1; i <= 3; i++) {
     `
 }
 Practice_Opts.innerHTML = str;
+
+function practiceTest(testNo) {
+    sessionStorage.setItem('practiceTestNo', testNo)
+}
+
 
 // Submit Test 
 function submitTest() {
