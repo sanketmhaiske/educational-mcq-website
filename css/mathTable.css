@@ -15,18 +15,25 @@
 }
 
 .mathTableName{
-    font-size: 24px;
+    font-size: 32px;
     font-family: sans-serif;
     font-weight: bold;
     color: #3b3b3b;
 }
 
+@media screen and (max-width: 500px) {
+    .mathTableName{
+        font-size: 24px;
+    }
+}
+
 .pdfReader {
     display: flex;
-    border: 1px solid lightgray;
-    width: 40rem;
+    /* border: 1px solid lightgray; */
+    width: -webkit-fill-available;
     height: 40rem;
     margin: 32px 0;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 800px) {

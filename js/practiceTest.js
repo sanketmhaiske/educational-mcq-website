@@ -157,6 +157,7 @@ function startTest(Q_no = 0) {
     document.querySelector('.testInfo').style.display = 'none';
     document.querySelector('.practiceTest').style.display = 'flex';
     document.querySelector('.practiceTest').innerHTML = `
+
     <div class="questionArea">
         <div class="question">
             <strong><span style='font-size: 24px;'>Q ${Data.Qno}.</span> ${Data.Question}</strong>
@@ -178,9 +179,9 @@ function startTest(Q_no = 0) {
                     <input type="radio" id="opt4" name="opt" onchange="submitAns('4','${Data.correctOpt}', '${Data.Qno}')" /    >
                     <label for="opt4" class='opt4'>${Data.Options[0].opt_no_4}</label>
                 </div>
-                ${Ques_no + 1 == QArray[QArray.length - 1].Qno ? '' : `<button class="nextQueBtn" type="submit">NEXT QUESTION</button>`}
+                <button class="nextQueBtn" type="submit">NEXT QUESTION</button>
             </form>
-               <button id="submitTestBtn" onclick="submitTest()">SUBMIT TEST</button>
+               <button id="submitTestBtn" onclick="submitTest()" style="background: #02a909;">SUBMIT TEST</button>
         </div>
     </div>
 
@@ -210,7 +211,6 @@ function startTest(Q_no = 0) {
         if (!e.target.opt.value) {
             alert('Please select any option')
         } else {
-
             startTest(Ques_no + 1)
             let Cans = JSON.stringify(correctAns);
             let Cobj = JSON.parse(Cans)
@@ -303,7 +303,7 @@ function submitTest() {
     document.querySelector('.testScore').innerHTML = `
             <div>
                <h3>Nice ! Your scored : ${correctAns.length} </h3>
-               <span> Question Answer correctly : ${correctAns.length}/${QArray.length}</span>
+               <span> Question Answered correctly : ${correctAns.length}/${QArray.length}</span>
             </div>
         `
 }

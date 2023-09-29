@@ -270,7 +270,7 @@ form {
 #submitTestBtn {
     position: absolute;
     right: 0%;
-    bottom: -16%;
+    bottom: -12%;
     padding: 10px 20px;
     border: none;
     font-weight: bold;
@@ -394,7 +394,7 @@ form {
 }
 
 .testScore>div {
-    background: lightgreen;
+    background: linear-gradient(175deg, #25fe8d, #fef86a);
     padding: 50px;
     display: flex;
     flex-direction: column;

@@ -4,7 +4,18 @@
 }
 
 .Qtext{
-    width: 19rem;
+    width: 24rem;
+}
+
+@media screen and (max-width: 1405px) {
+    .Qtext{
+        width: 20rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    .Qtext{
+        width: 19rem;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -22,6 +33,11 @@
     height: 14rem;
     border: 1px solid lightgray;
     margin: 0 10px;
+    overflow: hidden;
+}
+.questionImg>img{
+    width: 100%;
+    height: auto;
 }
 
 .questionText{
@@ -56,7 +72,7 @@
 }
 
 .testScore>div {
-    background: lightgreen;
+    background: linear-gradient(175deg, #25fe8d, #fef86a);
     padding: 50px;
     display: flex;
     flex-direction: column;
