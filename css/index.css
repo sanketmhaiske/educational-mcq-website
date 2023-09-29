@@ -93,7 +93,7 @@ header img {
     font-weight: 500;
     border: none;
     cursor: pointer;
-    bottom: 24%;
+    bottom: 30%;
     background: #236fff;
     color: white;
 }
@@ -128,7 +128,7 @@ header img {
     }
 
     to {
-        top: 80%;
+        top: 75%;
         opacity: 1;
     }
 }
@@ -158,6 +158,10 @@ header img {
     top: 2%;
     color: #383737;
     cursor: pointer;
+    border: 1px solid;
+    padding: 3px 5px;
+    border-radius: 5rem;
+    font-size: 12px;
 }
 
 .triangle {
@@ -172,7 +176,7 @@ header img {
     align-items: center;
     justify-content: center;
     background: white;
-    width: 500px;
+    width: 308px;
     height: max-content;
     padding: 32px;
     font-family: sans-serif;
@@ -194,24 +198,34 @@ header img {
 
 }
 
+.testBoxContent .testTypes {
+    display: flex;
+}
+
+.testTypes1,
+.testTypes2,
+.testTypes3,
+.testTypes4 {
+    display: flex;
+    flex-direction: column;
+}
+
 .testBoxContent .testTypes a {
     display: flex;
     text-decoration: none;
     align-items: center;
-    background: #036179;
-    color: white;
-    padding: 9px 16px;
+    color: rgb(32, 32, 32);
+    padding: 2px 4px;
     margin: 2px;
-    width: 5rem;
+    width: 4rem;
     height: 16px;
     justify-content: center;
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
-    transition: 0.5s all;
 }
 
 .testBoxContent .testTypes a:hover {
-    background: #00718e;
+    border-bottom: 2px solid #236fff;
 }
 
 .testTypes {

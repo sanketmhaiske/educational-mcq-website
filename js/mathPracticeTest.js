@@ -1,7 +1,7 @@
 // Practice test name 
 const MathsTestNo = sessionStorage.getItem('MathsTestNo')
 document.querySelector('.testName').innerHTML = `
-  Maths Test ${MathsTestNo}
+  Maths Test ${MathsTestNo ? MathsTestNo : 1}
 `
 
 

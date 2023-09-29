@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/math.css">
+    <link rel="stylesheet" href="./css/practice.css">
+    <link rel="stylesheet" href="./css/practiceTest.css">
     <title>Math</title>
 </head>
 
@@ -26,29 +27,30 @@
             <div class="testBoxContent">
                 <span class="triangle">&#9650;</span>
                 <span class="closeTestBox" onclick="closeMathTestBox()">&#x2715;</span>
-                <h2> CHOOSE TEST </h2>
+                <!-- <h2> CHOOSE TEST </h2> -->
                 <div class='testTypes'>
-                    <!-- test types  -->
+                    <div class="testTypes1"></div>
+                    <div class="testTypes2"></div>
+                    <div class="testTypes3"></div>
+                    <div class="testTypes4"></div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="Btns">
-        <button>MATH TEST</button>
-        <a href="/mathTable.html"><button onclick="mathTable()">MATH TABLE</button></a>
-        <!-- <div class="mathTableOpts">
-            <span class="closeTestBox" onclick="closeMathsTableBox()">&#x2715;</span>
-            <h3>CHOOSE TABLE</h3>
-            <div style="display: flex;flex-wrap: wrap;" class="mathTables">
-              
+    <div class="sections" style="flex-direction: column;">
+        <div class="section_1" style="width: auto;">
+            <span>Lorem Ipsum is dummy text</span>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <a href="math.html">MATHS TEST</a>
+        </div>
+        <div class="section_2" style="width: auto;">
+            <div style="display: flex; flex-direction: column;align-items: end;">
+                <span>Lorem Ipsum dummy text</span>
+                <p>Standard dummy text ever since the 1500s,</p>
+                <a href="/mathTable.html"><button>MATHS TABLE</button></a>
             </div>
-        </div> -->
+        </div>
     </div>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
     <footer>
         <div class="links">
             <a href="index.html">PRACTICE TEST</a>
@@ -64,7 +66,7 @@
         </div>
         <div class="links">
             <a>OTHER SERVICES</a>
-            <a>CONTACT DETAILS</a>
+            <a href="contact.html">CONTACT US</a>
         </div>
         <span class="copyright">
             © Copyright 2023 webedu.com
@@ -72,7 +74,7 @@
     </footer>
     <!-- script  -->
     <!-- <script src="./js/index.js"></script> -->
-    <script src="./js/math.js"></script>
+    <script src="./js/practice.js"></script>
 </body>
 
 </html>

@@ -25,9 +25,12 @@
             <div class="testBoxContent">
                 <span class="triangle">&#9650;</span>
                 <span class="closeTestBox" onclick="closeTestBox()">&#x2715;</span>
-                <h2> CHOOSE TEST </h2>
+                <!-- <h2> CHOOSE TEST </h2> -->
                 <div class='testTypes'>
-                    <!-- <a href='practiceTest.html'> TEST 1</a> -->
+                    <div class="testTypes1"></div>
+                    <div class="testTypes2"></div>
+                    <div class="testTypes3"></div>
+                    <div class="testTypes4"></div>
                 </div>
             </div>
         </div>
@@ -37,19 +40,19 @@
         <div class="section_1">
             <span>Lorem Ipsum is dummy text</span>
             <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-            <a href="math.html">TAKE TEST FOR MATHS</a>
+            <a href="mathPractice.html" onclick="sessionStorage.setItem('MathsTestNo', 1)">TAKE TEST FOR MATHS</a>
         </div>
         <div class="section_2">
             <!-- <div style="display: flex; flex-direction: column;align-items: end;"> -->
-                <span>Lorem Ipsum dummy text</span>
-                <p>Standard dummy text ever since the 1500s,</p>
-                <a href="/mathTable.html"><button>MATHS TABLE</button></a>
+            <span>Lorem Ipsum dummy text</span>
+            <p>Standard dummy text ever since the 1500s,</p>
+            <a href="/mathTable.html"><button>MATHS TABLE</button></a>
             <!-- </div> -->
         </div>
     </div>
     <footer>
         <div class="links">
-            <a href="index.html">PRACTICE TEST</a>
+            <a href="practice.html">PRACTICE TEST</a>
             <a href="math.html">TAKE TEST FOR MATHS</a>
         </div>
         <div class="links">
@@ -62,7 +65,7 @@
         </div>
         <div class="links">
             <a>OTHER SERVICES</a>
-            <a>CONTACT DETAILS</a>
+            <a href="contact.html">CONTACT US</a>
         </div>
         <span class="copyright">
             © Copyright 2023 webedu.com

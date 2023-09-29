@@ -1,9 +1,20 @@
+function mathTable() {
+    document.querySelector('.mathTableOpts').style.display = 'flex'
+}
+function closeMathTestBox() {
+    document.querySelector('.availableTests').style.display = 'none'
+}
+
+function takeTestNow() {
+    document.querySelector('.availableTests').style.display = 'flex';
+}
 
 // Practice Test 
 let testTypes1 = document.querySelector('.testTypes1');
 let testTypes2 = document.querySelector('.testTypes2');
 let testTypes3 = document.querySelector('.testTypes3');
 let testTypes4 = document.querySelector('.testTypes4');
+
 str1 = '';
 for (let i = 1; i <= 15; i++) {
     str1 += `<a href='practiceTest.html' onclick='practiceTest(${i})'> Test ${i} </a>`
@@ -27,15 +38,6 @@ for (let i = 46; i <= 60; i++) {
     str4 += `<a href='practiceTest.html' onclick='practiceTest(${i})'> Test ${i} </a>`
 }
 testTypes4.innerHTML = str4;
-
-
-
-function takeTestNow() {
-    document.querySelector('.availableTests').style.display = 'flex';
-}
-function closeTestBox() {
-    document.querySelector('.availableTests').style.display = 'none';
-}
 
 function practiceTest(testNo) {
     sessionStorage.setItem('practiceTestNo', testNo)
