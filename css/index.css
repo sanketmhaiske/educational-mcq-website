@@ -211,7 +211,7 @@ header img {
 }
 
 .testBoxContent .testTypes a {
-    display: flex;
+    display: block;
     text-decoration: none;
     align-items: center;
     color: rgb(32, 32, 32);
@@ -225,7 +225,7 @@ header img {
 }
 
 .testBoxContent .testTypes a:hover {
-    border-bottom: 2px solid #236fff;
+    color: #0024fd;
 }
 
 .testTypes {

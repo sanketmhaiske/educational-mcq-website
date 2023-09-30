@@ -18,18 +18,19 @@
                 <span>Leave your message. We will reach out to you asap.</span>
             </h1>
         </div>
-        <form>
+        <form onsubmit="sendEmail()">
             <span>Name.</span>
             <input type="text" placeholder="Enter your name." />
             <span>Email.</span>
-            <input type="email" placeholder="Enter your email-address." name="email"/>
+            <input type="email" placeholder="Enter your email-address." name="email" />
             <span>Subject.</span>
             <input type="text" placeholder="Enter your subject." />
             <span>Message</span>
             <textarea placeholder="Enter your message."></textarea>
-            <button>SUBMIT REQUEST</button>
+            <button type="submit">SUBMIT REQUEST</button>
         </form>
     </div>
+
 </body>
 
 </html>
