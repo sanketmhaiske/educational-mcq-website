@@ -18,7 +18,7 @@
                 <span>Leave your message. We will reach out to you asap.</span>
             </h1>
         </div>
-        <form onsubmit="sendEmail()">
+        <form>
             <span>Name.</span>
             <input type="text" placeholder="Enter your name." />
             <span>Email.</span>
@@ -27,10 +27,19 @@
             <input type="text" placeholder="Enter your subject." />
             <span>Message</span>
             <textarea placeholder="Enter your message."></textarea>
-            <button type="submit">SUBMIT REQUEST</button>
+            <button onclick="sendEmail()" class="submit">SUBMIT REQUEST</button>
         </form>
     </div>
-
+    <div class="confirmation">
+        <div class="confBox">
+            <i class="fa">&#x2713;</i>
+            <h2>Thank You</h2>
+            <span>Thank you for taking a moment to share your thoughts with us! We will respond to your inquiry asap. In
+                the meanwhile, please continue studying for the knowledge exam with the help of our practice tests! Good
+                luck!</span>
+        </div>
+    </div>
+<script src="./js/contact.js"></script>
 </body>
 
 </html>
