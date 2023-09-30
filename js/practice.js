@@ -17,25 +17,25 @@ let testTypes4 = document.querySelector('.testTypes4');
 
 str1 = '';
 for (let i = 1; i <= 15; i++) {
-    str1 += `<a href='practiceTest.html' onclick='practiceTest(${i})'> Test ${i} </a>`
+    str1 += `<a href='practiceTest.html${'#test' + i}' onclick='practiceTest(${i})'> Test ${i} </a>`
 }
 testTypes1.innerHTML = str1;
 
 str2 = '';
 for (let i = 16; i <= 30; i++) {
-    str2 += `<a href='practiceTest.html' onclick='practiceTest(${i})'> Test ${i} </a>`
+    str2 += `<a href='practiceTest.html${'#test' + i}' onclick='practiceTest(${i})'> Test ${i} </a>`
 }
 testTypes2.innerHTML = str2;
 
 str3 = '';
 for (let i = 31; i <= 45; i++) {
-    str3 += `<a href='practiceTest.html' onclick='practiceTest(${i})'> Test ${i} </a>`
+    str3 += `<a href='practiceTest.html${'#test' + i}' onclick='practiceTest(${i})'> Test ${i} </a>`
 }
 testTypes3.innerHTML = str3;
 
 str4 = '';
 for (let i = 46; i <= 60; i++) {
-    str4 += `<a href='practiceTest.html' onclick='practiceTest(${i})'> Test ${i} </a>`
+    str4 += `<a href='practiceTest.html${'#test' + i}' onclick='practiceTest(${i})'> Test ${i} </a>`
 }
 testTypes4.innerHTML = str4;
 

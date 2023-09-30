@@ -4,6 +4,13 @@ document.querySelector('.testName').innerHTML = `
   Maths Test ${MathsTestNo ? MathsTestNo : 1}
 `
 
+window.addEventListener("hashchange", () => {
+    const hash = window.location.hash
+    var numb = hash.match(/\d/g);
+    numb = numb.join("");
+    sessionStorage.setItem('MathsTestNo', numb);
+    window.location.reload();
+});
 
 const QArray = [
 
@@ -302,7 +309,7 @@ for (let i = 1; i <= 3; i++) {
         <h3>Maths Test ${parseInt(MathsTestNo) + i}</h3>
         <span>Lorem Ipsum is simply dummy text</span>
         <span class="BtnSpan">
-            <button><a style="color:white;" href="mathPractice.html" onclick="PracticeTest(${parseInt(MathsTestNo) + i})">START</a></button>
+            <button><a style="color:white;" href="mathPractice.html#test${parseInt(MathsTestNo) + i}" onclick="PracticeTest(${parseInt(MathsTestNo) + i})">START</a></button>
         </span>
         <div style="display: flex; flex-direction: column;">
             <strong>${20 + (i * 5)}</strong>
@@ -317,6 +324,9 @@ Practice_Opts.innerHTML = str;
 
 function PracticeTest(testNo) {
     sessionStorage.setItem('MathsTestNo', testNo)
+    setTimeout(()=>{
+        window.location.reload()
+    },500)
 }
 
 // Submit Test 

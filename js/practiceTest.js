@@ -4,6 +4,15 @@ document.querySelector('.testName').innerHTML = `
   Practice Test ${practiceTestNo}
 `
 
+window.addEventListener("hashchange", () => {
+    const hash = window.location.hash
+    var numb = hash.match(/\d/g);
+    numb = numb.join("");
+    sessionStorage.setItem('practiceTestNo', numb);
+    window.location.reload();
+});
+
+
 const QArray = [
 
     {
@@ -283,7 +292,7 @@ for (let i = 1; i <= 3; i++) {
         <h3>Practice Test ${parseInt(practiceTestNo) + i}</h3>
         <span>Lorem Ipsum is simply dummy text</span>
         <span class="BtnSpan">
-            <button><a style="color:white;" href="practiceTest.html" onclick="practiceTest(${parseInt(practiceTestNo) + i})">START</a></button>
+            <button><a style="color:white;" href="/practiceTest.html#test${parseInt(practiceTestNo) + i}" onclick="practiceTest(${parseInt(practiceTestNo) + i})">START</a></button>
         </span>
         <div style="display: flex; flex-direction: column;">
             <strong>${20 + (i * 5)}</strong>
@@ -298,6 +307,9 @@ Practice_Opts.innerHTML = str;
 
 function practiceTest(testNo) {
     sessionStorage.setItem('practiceTestNo', testNo)
+    setTimeout(() => {
+        window.location.reload()
+    }, 500)
 }
 
 
