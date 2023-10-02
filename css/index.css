@@ -156,12 +156,16 @@ header img {
     position: absolute;
     right: 2%;
     top: 2%;
-    color: #383737;
+    color: #0073b7;
     cursor: pointer;
     border: 1px solid;
     padding: 3px 5px;
     border-radius: 5rem;
     font-size: 12px;
+}
+
+.closeTestBox:hover {
+    color: #e84505;
 }
 
 .triangle {
@@ -176,7 +180,6 @@ header img {
     align-items: center;
     justify-content: center;
     background: white;
-    width: 308px;
     height: max-content;
     padding: 32px;
     font-family: sans-serif;
@@ -214,18 +217,19 @@ header img {
     display: block;
     text-decoration: none;
     align-items: center;
-    color: rgb(32, 32, 32);
-    padding: 2px 4px;
-    margin: 2px;
-    width: 4rem;
+    color: #0073b7;
+    padding: 0px 4px;
+    margin: 6px 15px;
+    width: 56px;
     height: 16px;
-    justify-content: center;
     font-size: 14px;
     cursor: pointer;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
 }
 
 .testBoxContent .testTypes a:hover {
-    color: #0024fd;
+    color: #e84505;
 }
 
 .testTypes {

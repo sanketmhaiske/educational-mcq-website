@@ -6,7 +6,8 @@ let testTypes3 = document.querySelector('.testTypes3');
 let testTypes4 = document.querySelector('.testTypes4');
 str1 = '';
 for (let i = 1; i <= 15; i++) {
-    str1 += `<a href='practiceTest.html${'#test' + i}' onclick='practiceTest(${i})'> Test ${i} </a>`
+    // str1 += `<a href='practiceTest.html${'#test' + i}' onclick='practiceTest(${i})'> Test ${i} </a>`
+    str1 += `<a href='/Test1/practiceTest${i}.html' onclick='practiceTest(${i})'> Test ${i} </a>`
 }
 testTypes1.innerHTML = str1;
 
