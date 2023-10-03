@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/contact.css">
     <title>Contact us</title>
 </head>
@@ -21,28 +22,52 @@
                 <span>Leave your message. We will reach out to you asap.</span>
             </h1>
         </div>
-        <form>
+        <form id="myForm">
             <span>Name.</span>
-            <input type="text" placeholder="Enter your name." />
+            <input type="text" name="name" id="name" placeholder="Enter your name." onfocus="FocusInput('name')" />
             <span>Email.</span>
-            <input type="email" placeholder="Enter your email-address." name="email" />
+            <input type="email" name="email" id="email" placeholder="Enter your email-address."
+                onfocus="FocusInput('email')" />
             <span>Subject.</span>
-            <input type="text" placeholder="Enter your subject." />
+            <input id="subject" name="subject" type="text" placeholder="Enter your subject."
+                onfocus="FocusInput('subject')" />
             <span>Message</span>
-            <textarea placeholder="Enter your message."></textarea>
-            <button onclick="sendEmail()" class="submit">SUBMIT REQUEST</button>
+            <textarea id="message" name="message" placeholder="Enter your message."
+                onfocus="FocusInput('message')"></textarea>
+            <button class="submit" >SUBMIT REQUEST</button>
         </form>
     </div>
+    <footer>
+        <div class="links">
+            <a href="practice.html">PRACTICE TEST</a>
+            <a href="mathPractice.html#test1" onclick="sessionStorage.setItem('MathsTestNo',1)">TAKE TEST FOR MATHS</a>
+        </div>
+        <div class="links">
+            <a href="mathTable.html">MATHS TABLES</a>
+            <a>FEEDBACK</a>
+        </div>
+        <div class="links">
+            <a>ABOUT US</a>
+            <a>PRIVACY & TERMS</a>
+        </div>
+        <div class="links">
+            <a>OTHER SERVICES</a>
+            <a href="contact.html">CONTACT US</a>
+        </div>
+        <span class="copyright"> © Copyright 2023 webedu.com</span>
+    </footer>
     <div class="confirmation">
         <div class="confBox">
-            <img src="./images/greenTick.png"/>
+            <img src="./images/greenTick.png" />
             <h2>Thank You</h2>
             <span>Thank you for taking a moment to share your thoughts with us! We will respond to your inquiry asap. In
                 the meanwhile, please continue studying for the knowledge exam with the help of our practice tests! Good
                 luck!</span>
         </div>
     </div>
-<script src="./js/contact.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="./js/contact.js"></script>
+
 </body>
 
 </html>

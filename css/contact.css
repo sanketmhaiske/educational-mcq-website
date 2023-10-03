@@ -131,7 +131,7 @@ textarea {
     padding: 16px;
     font-size: 16px;
     letter-spacing: 0.2px;
-    border: none;
+    border: 2px solid white;
     margin: 8px 0;
     font-family: sans-serif;
     resize: none;

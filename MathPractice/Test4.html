@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/practiceTest.css">
+    <link rel="stylesheet" href="../css/mathPracticeTest.css">
+    <title>Math Practice Test</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="../images/logo.png" alt="logo" /></a>
+    </header>
+    <div class="testInfo">
+        <span class="testName">Math Test 4 Practice Test</span>
+        <span class="subInfo">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+        <div class="otherInfo">
+            <div style="display: flex; flex-direction: column; margin-right: 24px;">
+                <span style="font-size: 13px;">NO OF QUESTIONS</span>
+                <strong style="margin: 8px 0;">20</strong>
+            </div>
+            <div style="display: flex; flex-direction: column; margin-right: 24px;">
+                <span style="font-size: 13px;">PASSING SCORE</span>
+                <strong style="margin: 8px 0;">70%</strong>
+            </div>
+            <button onclick="startTest()"> START TEST</button>
+        </div>
+    </div>
+    <!-- Practice Test  -->
+    <div class="practiceTest"></div>
+    <div class="testScore"></div>
+    <!-- Another tests  -->
+    <div class="anotherTestOpts">
+        <h2>PICK ANOTHER MATHS TESTS</h2>
+        <div class="Practice_Opts">
+            <div class="Practice_Opts">
+                <div class="practiceTestBox">
+                    <h3>Maths Test 1</h3>
+                    <span>Lorem Ipsum is simply dummy text</span>
+                    <span class="BtnSpan">
+                        <button><a style="color:white;" href="/MathPractice/Test1.html" onclick="PracticeTest(1)">START</a></button>
+                    </span>
+                    <div style="display: flex; flex-direction: column;">
+                        <strong>30</strong>
+                        <span style="font-size: 14px;
+                        margin: 10px 0;
+                        color: #454545;">QUESTIONS</span>
+                    </div>
+                </div>
+                <div class="practiceTestBox">
+                    <h3>Maths Test 2</h3>
+                    <span>Lorem Ipsum is simply dummy text</span>
+                    <span class="BtnSpan">
+                        <button><a style="color:white;" href="/MathPractice/Test2.html" onclick="PracticeTest(2)">START</a></button>
+                    </span>
+                    <div style="display: flex; flex-direction: column;">
+                        <strong>30</strong>
+                        <span style="font-size: 14px;
+                        margin: 10px 0;
+                        color: #454545;">QUESTIONS</span>
+                    </div>
+                </div>
+                <div class="practiceTestBox">
+                    <h3>Maths Test 3</h3>
+                    <span>Lorem Ipsum is simply dummy text</span>
+                    <span class="BtnSpan">
+                        <button><a style="color:white;" href="/MathPractice/Test3.html" onclick="PracticeTest(4)">START</a></button>
+                    </span>
+                    <div style="display: flex; flex-direction: column;">
+                        <strong>30</strong>
+                        <span style="font-size: 14px;
+                        margin: 10px 0;
+                        color: #454545;">QUESTIONS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sections">
+        <div class="section_1">
+            <span>Lorem Ipsum is dummy text</span>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <a href="../practice.html">PRACTICE TEST</a>
+        </div>
+        <div class="section_2">
+            <div style="display: flex; flex-direction: column;align-items: end;">
+                <span>Lorem Ipsum dummy text</span>
+                <p>Standard dummy text ever since the 1500s,</p>
+                <a href="../mathTable.html"><button>MATHS TABLE</button></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="links">
+            <a href="../practice.html">PRACTICE TEST</a>
+            <a href="/MathPractice/Test1.html" onclick="sessionStorage.setItem('MathsTestNo',1)">TAKE TEST FOR MATHS</a>
+        </div>
+        <div class="links">
+            <a href="../mathTable.html">MATHS TABLES</a>
+            <a>FEEDBACK</a>
+        </div>
+        <div class="links">
+            <a>ABOUT US</a>
+            <a>PRIVACY & TERMS</a>
+        </div>
+        <div class="links">
+            <a>OTHER SERVICES</a>
+            <a href="../contact.html">CONTACT US</a>
+        </div>
+        <span class="copyright">
+            © Copyright 2023 webedu.com
+        </span>
+    </footer>
+    <script src="../js/mathPracticeTest.js"></script>
+</body>
+
+</html>

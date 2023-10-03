@@ -284,32 +284,33 @@ function submitAns(opt, cOpt, Qno) {
     }
 }
 
-const Practice_Opts = document.querySelector('.Practice_Opts');
-str = '';
-for (let i = 1; i <= 3; i++) {
-    str += `
-    <div class="practiceTestBox">
-        <h3>Practice Test ${parseInt(practiceTestNo) + i}</h3>
-        <span>Lorem Ipsum is simply dummy text</span>
-        <span class="BtnSpan">
-            <button><a style="color:white;" href="/practiceTest.html#test${parseInt(practiceTestNo) + i}" onclick="practiceTest(${parseInt(practiceTestNo) + i})">START</a></button>
-        </span>
-        <div style="display: flex; flex-direction: column;">
-            <strong>${20 + (i * 5)}</strong>
-            <span style="font-size: 14px;
-            margin: 10px 0;
-            color: #454545;">QUESTIONS</span>
-        </div>
-    </div>
-    `
-}
+// const Practice_Opts = document.querySelector('.Practice_Opts');
+// str = '';
+// for (let i = 1; i <= 3; i++) {
+//     str += `
+//     <div class="practiceTestBox">
+//         <h3>Practice Test ${parseInt(practiceTestNo) + i}</h3>
+//         <span>Lorem Ipsum is simply dummy text</span>
+//         <span class="BtnSpan">
+//             <button><a style="color:white;" href="/practiceTest.html${parseInt(practiceTestNo) + i}" onclick="practiceTest(${parseInt(practiceTestNo) + i})">START</a></button>
+//         </span>
+//         <div style="display: flex; flex-direction: column;">
+//             <strong>${20 + (i * 5)}</strong>
+//             <span style="font-size: 14px;
+//             margin: 10px 0;
+//             color: #454545;">QUESTIONS</span>
+//         </div>
+//     </div>
+//     `
+// }
+
 Practice_Opts.innerHTML = str;
 
 function practiceTest(testNo) {
     sessionStorage.setItem('practiceTestNo', testNo)
-    setTimeout(() => {
-        window.location.reload()
-    }, 500)
+    // setTimeout(() => {
+    //     window.location.reload()
+    // }, 500)
 }
 
 
