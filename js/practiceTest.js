@@ -308,9 +308,6 @@ Practice_Opts.innerHTML = str;
 
 function practiceTest(testNo) {
     sessionStorage.setItem('practiceTestNo', testNo)
-    // setTimeout(() => {
-    //     window.location.reload()
-    // }, 500)
 }
 
 
