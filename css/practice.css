@@ -49,13 +49,6 @@ button {
     animation: testBox 0.8s ease-in-out forwards;
 }
 
-@media screen and (max-width: 600px) {
-    .mathTableOpts {
-        width: 80%;
-        margin-left: auto;
-    }
-}
-
 @keyframes testBox {
     from {
         top: 70%;
@@ -67,6 +60,35 @@ button {
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .mathTableOpts {
+        width: 80%;
+        margin-left: auto;
+        animation: testBoxMob 0.8s ease-in-out forwards;
+    }    
+}
+
+@media screen and (max-width: 500px) {
+    .availableTests {
+        top: 80%;
+        animation: testBox 0.8s ease-in-out forwards;
+    }
+
+    @keyframes testBox {
+        from {
+            top: 80%;
+            opacity: 0;
+        }
+
+        to {
+            top: 100%;
+            opacity: 1;
+        }
+    }
+}
+
+
 
 .mathTableOpts a {
     display: flex;

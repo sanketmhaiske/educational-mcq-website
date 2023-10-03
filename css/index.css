@@ -164,6 +164,15 @@ header img {
     font-size: 12px;
 }
 
+@media screen and (max-width: 500px) {
+    .closeTestBox {
+        right: 1%;
+        top: 1%;
+        padding: 3px 4px;
+        font-size: 9px;
+    }
+}
+
 .closeTestBox:hover {
     color: #e84505;
 }
@@ -188,7 +197,6 @@ header img {
 
 @media screen and (max-width: 500px) {
     .testBoxContent {
-        width: 90%;
         padding: 10px;
         margin: 0 auto;
         position: relative;
@@ -199,10 +207,6 @@ header img {
     margin: 20px 8px;
     color: #343434;
 
-}
-
-.testBoxContent .testTypes {
-    display: flex;
 }
 
 .testTypes1,
@@ -228,6 +232,14 @@ header img {
     border-bottom: 1px solid;
 }
 
+@media screen and (max-width:500px) {
+    .testBoxContent .testTypes a {
+        margin: 6px 6px;
+        width: 52px;
+        font-size: 12px;
+    }
+}
+
 .testBoxContent .testTypes a:hover {
     color: #e84505;
 }
@@ -236,6 +248,12 @@ header img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+@media screen and (max-width:500px) {
+    .testTypes {
+        width: 20rem;
+    }
 }
 
 .sections {

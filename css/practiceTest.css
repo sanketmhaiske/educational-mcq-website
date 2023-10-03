@@ -229,6 +229,12 @@ form {
     border: 1px solid lightgray;
 }
 
+@media screen and (max-width: 500px) {
+    .question{
+        padding: 8px;
+    }
+}
+
 .question strong {
     font-size: 20px;
     line-height: 30px;
