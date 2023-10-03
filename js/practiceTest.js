@@ -152,7 +152,6 @@ const correctAns = [];
 const wrongAns = [];
 
 
-
 function startTest(Q_no = 0) {
     var Ques_no = Q_no;
     const Data = QArray[Ques_no]
@@ -284,25 +283,6 @@ function submitAns(opt, cOpt, Qno) {
     }
 }
 
-// const Practice_Opts = document.querySelector('.Practice_Opts');
-// str = '';
-// for (let i = 1; i <= 3; i++) {
-//     str += `
-//     <div class="practiceTestBox">
-//         <h3>Practice Test ${parseInt(practiceTestNo) + i}</h3>
-//         <span>Lorem Ipsum is simply dummy text</span>
-//         <span class="BtnSpan">
-//             <button><a style="color:white;" href="/practiceTest.html${parseInt(practiceTestNo) + i}" onclick="practiceTest(${parseInt(practiceTestNo) + i})">START</a></button>
-//         </span>
-//         <div style="display: flex; flex-direction: column;">
-//             <strong>${20 + (i * 5)}</strong>
-//             <span style="font-size: 14px;
-//             margin: 10px 0;
-//             color: #454545;">QUESTIONS</span>
-//         </div>
-//     </div>
-//     `
-// }
 
 Practice_Opts.innerHTML = str;
 
@@ -310,14 +290,13 @@ function practiceTest(testNo) {
     sessionStorage.setItem('practiceTestNo', testNo)
 }
 
-
 // Submit Test 
 function submitTest() {
     document.querySelector('.practiceTest').style.display = 'none';
     document.querySelector('.testScore').style.display = 'flex';
     document.querySelector('.testScore').innerHTML = `
             <div>
-               <h3>Nice ! Your scored : ${correctAns.length} </h3>
+               <h3>Nice ! Your Score : ${correctAns.length} </h3>
                <span> Question Answered correctly : ${correctAns.length}/${QArray.length}</span>
             </div>
         `

@@ -301,27 +301,6 @@ function submitTest() {
     `
 }
 
-// const Practice_Opts = document.querySelector('.Practice_Opts');
-// str = '';
-// for (let i = 1; i <= 3; i++) {
-//     str += `
-//     <div class="practiceTestBox">
-//         <h3>Maths Test ${parseInt(MathsTestNo) + i}</h3>
-//         <span>Lorem Ipsum is simply dummy text</span>
-//         <span class="BtnSpan">
-//             <button><a style="color:white;" href="mathPractice.html#test${parseInt(MathsTestNo) + i}" onclick="PracticeTest(${parseInt(MathsTestNo) + i})">START</a></button>
-//         </span>
-//         <div style="display: flex; flex-direction: column;">
-//             <strong>${20 + (i * 5)}</strong>
-//             <span style="font-size: 14px;
-//             margin: 10px 0;
-//             color: #454545;">QUESTIONS</span>
-//         </div>
-//     </div>
-//     `
-// }
-
-// Practice_Opts.innerHTML = str;
 
 function PracticeTest(testNo) {
     sessionStorage.setItem('MathsTestNo', testNo)
@@ -336,7 +315,7 @@ function submitTest() {
     document.querySelector('.testScore').style.display = 'flex';
     document.querySelector('.testScore').innerHTML = `
             <div>
-               <h3>Nice ! Your scored : ${correctAns.length} </h3>
+               <h3>Nice ! Your Score : ${correctAns.length} </h3>
                <span> Question Answered correctly : ${correctAns.length}/${QArray.length}</span>
             </div>
         `
