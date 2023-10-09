@@ -61,7 +61,7 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
 
         // Send the email using EmailJS
         document.querySelector('.submit').innerHTML = 'Sending...'
-        emailjs.send("service_4pjdyzk", "template_q4iw5kn", emailParams)
+        emailjs.send("service_ID", "template_ID", emailParams)
             .then(function (response) {
                 console.log("Email sent successfully", response);
                 alert("Email sent successfully!");
